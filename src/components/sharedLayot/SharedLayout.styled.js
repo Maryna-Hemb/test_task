@@ -2,39 +2,33 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 const Container = styled.div`
-  // max-width: 960px;
-  margin: 0 auto;
-  padding: 0 16px;
+  max-height: 100vh;
+  padding: 48px 48px 41px;
+  background-color: #1d283a;
+  color: #ffffff;
 `;
-const Header = styled.header`
-  display: flex;
-  //   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 8px 0;
-  margin-bottom: 16px;
-  border-bottom: 2px solid rgb(166 164 164);
-
-  > nav {
-    display: flex;
-  }
+const LogoSpan = styled.span`
+  font-size: 16px;
+  font-weight: 600;
+  color: #539713;
+`;
+const Logo = styled.p`
+  margin: 0px;
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
 `;
 
 const Link = styled(NavLink)`
-  padding: 8px 16px;
-  border-radius: 4px;
   text-decoration: none;
-  color: black;
-  font-weight: 500;
-
-  &.active {
-    color: white;
-    background-color: orangered;
-  }
+  cursor: pointer;
 `;
 
 const Main = styled.main`
-  padding: 0px 16 px;
+  height: calc(100vh - 167px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
-export { Container, Header, Link, Main };
+export { Container, Logo, LogoSpan, Link, Main };
