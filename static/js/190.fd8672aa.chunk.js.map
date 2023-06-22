@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/190.fd8672aa.chunk.js","mappings":"wIAIA,UAJiB,WACf,OAAO,wDACR,C","sources":["pages/authPage.jsx"],"sourcesContent":["const authPage = () => {\n  return <div>AuthNavigation will be here</div>;\n};\n\nexport default authPage;\n"],"names":[],"sourceRoot":""}
