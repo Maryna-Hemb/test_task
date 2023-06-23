@@ -1,5 +1,11 @@
+import Content from 'components/content/Content';
+
 const homePage = () => {
-  return <div>text will be here</div>;
+  return (
+    <>
+      <Content />
+    </>
+  );
 };
 
 export default homePage;
