@@ -22,11 +22,15 @@ const initialValues = {
 const SignIn = () => {
   const [showPassword, setShowPassword] = useState(true);
   const [toggleModal, setToggleModal] = useState(false);
-  const navigate = useNavigate();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  useEffect(() => {}, [toggleModal]);
+
   const onHomePage = () => {
     navigate('/Home');
   };
+
   const hendleSubmit = (values, { resetForm }) => {
     dispatch(
       register({
@@ -42,7 +46,6 @@ const SignIn = () => {
   const handleMouseDownPassword = event => {
     event.preventDefault();
   };
-  useEffect(() => {}, [toggleModal]);
 
   return !toggleModal ? (
     <Container id={'signIn'}>

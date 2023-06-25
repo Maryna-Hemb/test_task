@@ -1,8 +1,8 @@
-// import SharedLayout from 'components/sharedLayot/SharedLayout';
 import * as React from 'react';
 import { Formik, Form } from 'formik';
 import { useDispatch } from 'react-redux';
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { register } from '../../redux/auth/authOperations';
 import {
   LinkTo,
@@ -23,7 +23,16 @@ const initialValues = {
 };
 
 const SignUp = () => {
+  const [showPassword, setShowPassword] = useState(true);
+  const [toggleModal, setToggleModal] = useState(false);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  useEffect(() => {}, [toggleModal]);
+
+  const onHomePage = () => {
+    navigate('/Home');
+  };
 
   const hendleSubmit = (values, { resetForm }) => {
     if (values.password === values.confirmPassword) {
@@ -40,15 +49,10 @@ const SignUp = () => {
     }
   };
 
-  const [showPassword, setShowPassword] = useState(true);
-  const [toggleModal, setToggleModal] = useState(false);
-
   const handleClickShowPassword = () => setShowPassword(show => !show);
   const handleMouseDownPassword = event => {
     event.preventDefault();
   };
-
-  useEffect(() => {}, [toggleModal]);
 
   return !toggleModal ? (
     <Container>
@@ -131,7 +135,9 @@ const SignUp = () => {
           </label>
           <br />
 
-          <button type="submit">Sign up</button>
+          <button type="submit" onClick={onHomePage}>
+            Sign up
+          </button>
         </Form>
       </Formik>
       <div>
