@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
   max-height: 100vh;
@@ -19,7 +19,7 @@ const Logo = styled.p`
   color: white;
 `;
 
-const Link = styled(NavLink)`
+const LinkTo = styled(Link)`
   text-decoration: none;
   cursor: pointer;
 `;
@@ -31,4 +31,4 @@ const Main = styled.main`
   align-items: center;
 `;
 
-export { Container, Logo, LogoSpan, Link, Main };
+export { Container, Logo, LogoSpan, LinkTo, Main };

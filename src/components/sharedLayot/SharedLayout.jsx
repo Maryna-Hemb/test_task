@@ -1,15 +1,15 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
-import { Container, Logo, LogoSpan, Link, Main } from './SharedLayout.styled';
+import { Container, Logo, LogoSpan, LinkTo, Main } from './SharedLayout.styled';
 
 const SharedLayout = () => {
   return (
     <Container>
       <header>
         <nav>
-          <Link to="/home">
+          <LinkTo to="/home">
             <Logo>InCode</Logo> <br /> <LogoSpan>Finance</LogoSpan>
-          </Link>
+          </LinkTo>
         </nav>
       </header>
       <Main>
